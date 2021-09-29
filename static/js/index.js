@@ -17,7 +17,15 @@ function LED1_Off(){
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
-
+function LED1_One() {
+	//alert("led one");
+	console.log("led one");
+	//document.getElementById("sensor").innerHTML="led one";
+	message = new Paho.MQTT.Message("ONE");
+    	message.destinationName = "elitearevalo31@gmail.com/t1";
+    	client.send(message);
+  
+}
 
 
 
