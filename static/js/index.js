@@ -58,7 +58,7 @@ function LED1_Off(){
     console.log(e);
 	
   }
-//aaa
+
   // called when the client loses its connection
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
@@ -70,6 +70,6 @@ function LED1_Off(){
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
     var a = message.payloadString.split("-")
-	 document.getElementById("sensor1").innerHTML=a[0];
+	  document.getElementById("sensor1").innerHTML=a[0];
     document.getElementById("sensor2").innerHTML=a[1];
   }
