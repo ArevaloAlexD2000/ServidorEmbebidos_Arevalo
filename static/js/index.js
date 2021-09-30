@@ -7,6 +7,7 @@ function LED1_On() {
 	message = new Paho.MQTT.Message("ON");
     	message.destinationName = "elitearevalo31@gmail.com/t1";
     	client.send(message);
+  
 }
 function LED1_Off(){	
 	//alert("led off");
@@ -16,14 +17,7 @@ function LED1_Off(){
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
-function LED1_One() {
-	//alert("led one");
-	console.log("led one");
-	//document.getElementById("sensor").innerHTML="led one";
-	message = new Paho.MQTT.Message("ONE");
-    	message.destinationName = "elitearevalo31@gmail.com/t1";
-    	client.send(message); 
-}
+
 
 
 
@@ -75,9 +69,7 @@ function LED1_One() {
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-    var b = message.payloadString.split("-")
-    document.getElementById("sensor1").innerHTML=b[0];
-    document.getElementById("sensor2").innerHTML=b[1];
-    document.getElementById("sensor3").innerHTML=b[2];
+    var a = message.payloadString.split("-")
+	 document.getElementById("sensor1").innerHTML=a[0];
+    document.getElementById("sensor2").innerHTML=a[1];
   }
-  
