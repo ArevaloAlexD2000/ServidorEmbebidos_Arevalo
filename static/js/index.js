@@ -58,7 +58,7 @@ function LED1_Off(){
     console.log(e);
 	
   }
-
+//aaa
   // called when the client loses its connection
   function onConnectionLost(responseObject) {
     if (responseObject.errorCode !== 0) {
